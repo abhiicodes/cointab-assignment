@@ -99,7 +99,7 @@ const Login = () => {
           }
 
           axios
-            .post("http://localhost:8080/signup", {
+            .post("https://cointab-backend-production.up.railway.app/signup", {
               email,
               user_name: username,
               password,

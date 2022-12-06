@@ -21,7 +21,7 @@ import Deletemodal from "./Deletemodal";
 import Editmodal from "./Editmodal";
 const Users = () => {
   const users = useSelector((store) => store.users);
-  console.log(users)
+  console.log(users);
   const token = useSelector((store) => store.token);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const {
@@ -50,11 +50,15 @@ const Users = () => {
   const handleForm = (data) => {
     if (data.edit) {
       axios
-        .patch(`http://localhost:8080/edit/${user._id}`, data, {
-          headers: {
-            authorization: "Bearer " + token,
-          },
-        })
+        .patch(
+          `https://cointab-backend-production.up.railway.app/edit/${user._id}`,
+          data,
+          {
+            headers: {
+              authorization: "Bearer " + token,
+            },
+          }
+        )
         .then((res) => {
           toast({
             title: `User Edited successfully`,
@@ -69,7 +73,7 @@ const Users = () => {
         });
     } else {
       axios
-        .post(`http://localhost:8080/add`, data, {
+        .post(`https://cointab-backend-production.up.railway.app/add`, data, {
           headers: {
             authorization: "Bearer " + token,
           },
@@ -90,11 +94,14 @@ const Users = () => {
   };
   const handleDelete = () => {
     axios
-      .delete(`http://localhost:8080/delete/${user._id}`, {
-        headers: {
-          authorization: "Bearer " + token,
-        },
-      })
+      .delete(
+        `https://cointab-backend-production.up.railway.app/delete/${user._id}`,
+        {
+          headers: {
+            authorization: "Bearer " + token,
+          },
+        }
+      )
       .then((res) => {
         toast({
           title: `User deleted successfully`,

@@ -18,6 +18,7 @@ const AllRoutes = () => {
             <Route path="*" element={<PageNotFound/>}/>
         </Routes>
     </div>
+    
   )
 }
 
