@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route, Routes } from 'react-router'
-import Login from '../components/Login'
+import Login from '../components/Login.jsx'
 import PageNotFound from '../components/PageNotFound'
 
 import Signup from '../Components/Signup'
@@ -18,7 +18,7 @@ const AllRoutes = () => {
             <Route path="*" element={<PageNotFound/>}/>
         </Routes>
     </div>
-    
+
   )
 }
 
