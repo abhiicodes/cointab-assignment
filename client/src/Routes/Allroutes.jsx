@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Routes } from 'react-router'
-import Login from '../components/Login.jsx'
-import PageNotFound from '../components/PageNotFound'
+import Login from '../Components/Login.jsx'
+import PageNotFound from '../Components/PageNotFound'
 
 import Signup from '../Components/Signup'
 import Users from '../Components/Users'
