@@ -50,15 +50,11 @@ const Users = () => {
   const handleForm = (data) => {
     if (data.edit) {
       axios
-        .patch(
-          `https://cointab-backend-production.up.railway.app/edit/${user._id}`,
-          data,
-          {
-            headers: {
-              authorization: "Bearer " + token,
-            },
-          }
-        )
+        .patch(`https://cointab-hdsd.onrender.com/edit/${user._id}`, data, {
+          headers: {
+            authorization: "Bearer " + token,
+          },
+        })
         .then((res) => {
           toast({
             title: `User Edited successfully`,
@@ -73,7 +69,7 @@ const Users = () => {
         });
     } else {
       axios
-        .post(`https://cointab-backend-production.up.railway.app/add`, data, {
+        .post(`https://cointab-hdsd.onrender.com/add`, data, {
           headers: {
             authorization: "Bearer " + token,
           },
@@ -94,14 +90,11 @@ const Users = () => {
   };
   const handleDelete = () => {
     axios
-      .delete(
-        `https://cointab-backend-production.up.railway.app/delete/${user._id}`,
-        {
-          headers: {
-            authorization: "Bearer " + token,
-          },
-        }
-      )
+      .delete(`https://cointab-hdsd.onrender.com/delete/${user._id}`, {
+        headers: {
+          authorization: "Bearer " + token,
+        },
+      })
       .then((res) => {
         toast({
           title: `User deleted successfully`,
